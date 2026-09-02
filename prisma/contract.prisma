@@ -1,0 +1,5 @@
+model User {
+    id    ObjectId @id @map("_id")
+    email String   @unique
+    name  String
+}

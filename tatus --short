@@ -1,0 +1,306 @@
+warning: in the working copy of 'package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/package-lock.json b/package-lock.json[m
+[1mindex 10f036f..03e69f3 100644[m
+[1m--- a/package-lock.json[m
+[1m+++ b/package-lock.json[m
+[36m@@ -7,8 +7,11 @@[m
+     "": {[m
+       "name": "vibe-code-editor",[m
+       "version": "0.1.0",[m
+[32m+[m[32m      "hasInstallScript": true,[m
+       "dependencies": {[m
+         "@base-ui/react": "^1.7.0",[m
+[32m+[m[32m        "@prisma/client": "^7.10.0",[m
+[32m+[m[32m        "@prisma/orm-mongo": "^8.0.0-rc.8",[m
+         "@shadcn/react": "^0.3.1",[m
+         "class-variance-authority": "^0.7.1",[m
+         "clsx": "^2.1.1",[m
+[36m@@ -17,6 +20,7 @@[m
+         "embla-carousel-react": "^8.6.0",[m
+         "input-otp": "^1.5.0",[m
+         "lucide-react": "^1.39.0",[m
+[32m+[m[32m        "mongodb": "^7.6.0",[m
+         "next": "16.3.4",[m
+         "react": "19.2.8",[m
+         "react-day-picker": "^10.0.1",[m
+[36m@@ -35,10 +39,95 @@[m
+         "babel-plugin-react-compiler": "1.0.0",[m
+         "eslint": "^9",[m
+         "eslint-config-next": "16.3.4",[m
+[32m+[m[32m        "prisma": "^8.0.0-rc.12",[m
+         "tailwindcss": "^4",[m
+         "typescript": "^5"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/@alcalzone/ansi-tokenize": {[m
+[32m+[m[32m      "version": "0.2.5",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@alcalzone/ansi-tokenize/-/ansi-tokenize-0.2.5.tgz",[m
+[32m+[m[32m      "integrity": "sha512-3NX/MpTdroi0aKz134A6RC2Gb2iXVECN4QaAXnvCIxxIm3C3AVB1mkUe8NaaiyvOpDfsrqWhYtj+Q6a62RrTsw==",[m
+[32m+[m[32m      "devOptional": true,[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "ansi-styles": "^6.2.1",[m
+[32m+[m[32m        "is-fullwidth-code-point": "^5.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=18"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@alcalzone/ansi-tokenize/node_modules/ansi-styles": {[m
+[32m+[m[32m      "version": "6.2.3",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.3.tgz",[m
+[32m+[m[32m      "integrity": "sha512-4Dj6M28JB+oAH8kFkTLUo+a2jwOFkuqb3yucU0CANcRRUbxS0cP0nZYCGjcc3BNXwRIsUVmDGgzawme7zvJHvg==",[m
+[32m+[m[32m      "devOptional": true,[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=12"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "funding": {[m
+[32m+[m[32m        "url": "https://github.com/chalk/ansi-styles?sponsor=1"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@alchemy.run/cloudflare-runtime": {[m
+[32m+[m[32m      "version": "2.0.0-beta.74",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@alchemy.run/cloudflare-runtime/-/cloudflare-runtime-2.0.0-beta.74.tgz",[m
+[32m+[m[32m      "integrity": "sha512-P4eICKlw1TgnY6QjM3mztIuZcKXPdT4MmbatxWvzSp7ecueWcts9vnXn21dC0KR/vtRBRdopyuEbhmQ1CB0TfQ==",[m
+[32m+[m[32m      "devOptional": true,[m
+[32m+[m[32m      "license": "Apache-2.0",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@alchemy.run/node-utils": "2.0.0-beta.74",[m
+[32m+[m[32m        "@cloudflare/unenv-preset": "^2.16.0",[m
+[32m+[m[32m        "@puppeteer/browsers": "^3.2.0",[m
+[32m+[m[32m        "capnp-es": "^0.0.14",[m
+[32m+[m[32m        "magic-string": "^0.30.21",[m
+[32m+[m[32m        "sharp": "^0.35.3",[m
+[32m+[m[32m        "unenv": "^2.0.0-rc.24",[m
+[32m+[m[32m        "workerd": "1.20260704.1",[m
+[32m+[m[32m        "yauzl": "^3.4.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "peerDependencies": {[m
+[32m+[m[32m        "@distilled.cloud/cloudflare": "1.0.0-rc.6",[m
+[32m+[m[32m        "@effect/platform-bun": ">=4.0.0-rc.110 || >=4.0.0",[m
+[32m+[m[32m        "@effect/platform-node": ">=4.0.0-rc.110 || >=4.0.0",[m
+[32m+[m[32m        "effect": ">=4.0.0-rc.110 || >=4.0.0",[m
+[32m+[m[32m        "rolldown": "1.1.5",[m
+[32m+[m[32m        "vite": "^7.0.0 || ^8.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "peerDependenciesMeta": {[m
+[32m+[m[32m        "@effect/platform-bun": {[m
+[32m+[m[32m          "optional": true[m
+[32m+[m[32m        },[m
+[32m+[m[32m        "@effect/platform-node": {[m
+[32m+[m[32m          "optional": true[m
+[32m+[m[32m        },[m
+[32m+[m[32m        "rolldown": {[m
+[32m+[m[32m          "optional": true[m
+[32m+[m[32m        },[m
+[32m+[m[32m        "vite": {[m
+[32m+[m[32m          "optional": true[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@alchemy.run/floci": {[m
+[32m+[m[32m      "version": "2.0.0-beta.74",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@alchemy.run/floci/-/floci-2.0.0-beta.74.tgz",[m
+[32m+[m[32m      "integrity": "sha512-JxQ1d1N8TzRXliJxI9HEM1DVIIONPB/NpPYx0S3EjGC6m0qM5Q5NzLJBXozxUL85mDTWba4cAodrpMF9oDIdsg==",[m
+[32m+[m[32m      "devOptional": true,[m
+[32m+[m[32m      "license": "Apache-2.0",[m
+[32m+[m[32m      "peerDependencies": {[m
+[32m+[m[32m        "effect": ">=4.0.0-rc.110 || >=4.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@alchemy.run/node-utils": {[m
+[32m+[m[32m      "version": "2.0.0-beta.74",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@alchemy.run/node-utils/-/node-utils-2.0.0-beta.74.tgz",[m
+[32m+[m[32m      "integrity": "sha512-UH7mbmF0qZWL0b5xURFaRbKR2qNXdvxEjIq86FdqSKacnH0lsHSgGzNKFbDSKFAY1u6Kq3unHFmgRk7UAD/YTQ==",[m
+[32m+[m[32m      "devOptional": true,[m
+[32m+[m[32m      "license": "Apache-2.0"[m
+[32m+[m[32m    },[m
+     "node_modules/@alloc/quick-lru": {[m
+       "version": "5.3.0",[m
+       "resolved": "https://registry.npmjs.org/@alloc/quick-lru/-/quick-lru-5.3.0.tgz",[m
+[36m@@ -52,6 +141,361 @@[m
+         "url": "https://github.com/sponsors/sindresorhus"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/@ark/schema": {[m
+[32m+[m[32m      "version": "0.56.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@ark/schema/-/schema-0.56.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-Qx4D2JFbBWpntiHZaTv7bGG4H/M2rigiknezKg/WVyDSaLdE4YCcWAOoFB7pjjDqHbbV2OqRfntm1nnXvwMexg==",[m
+[32m+[m[32m      "license": "MIT",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@ark/util": "0.56.2"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@ark/util": {[m
+[32m+[m[32m      "version": "0.56.2",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@ark/util/-/util-0.56.2.tgz",[m
+[32m+[m[32m      "integrity": "sha512-9kU2sUE38FZEGG7l3hamYMBieLYEJh2L1mrYD2eXpT+78EnQSV1bhjxJhnxGBMSTbtwpBSDNSK+K60WvaI/DTQ==",[m
+[32m+[m[32m      "license": "MIT"[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@aws-crypto/crc32": {[m
+[32m+[m[32m      "version": "5.2.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@aws-crypto/crc32/-/crc32-5.2.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-nLbCWqQNgUiwwtFsen1AdzAtvuLRsQS8rYgMuxCrdKf9kOssamGLuPwyTY9wyYblNr9+1XM8v6zoDTPPSIeANg==",[m
+[32m+[m[32m      "devOptional": true,[m
+[32m+[m[32m      "license": "Apache-2.0",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@aws-crypto/util": "^5.2.0",[m
+[32m+[m[32m        "@aws-sdk/types": "^3.222.0",[m
+[32m+[m[32m        "tslib": "^2.6.2"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=16.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@aws-crypto/util": {[m
+[32m+[m[32m      "version": "5.2.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@aws-crypto/util/-/util-5.2.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-4RkU9EsI6ZpBve5fseQlGNUWKMa1RLPQ1dnjnQoe07ldfIzcsGb5hC5W0Dm7u423KWzawlrpbjXBrXCEv9zazQ==",[m
+[32m+[m[32m      "devOptional": true,[m
+[32m+[m[32m      "license": "Apache-2.0",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@aws-sdk/types": "^3.222.0",[m
+[32m+[m[32m        "@smithy/util-utf8": "^2.0.0",[m
+[32m+[m[32m        "tslib": "^2.6.2"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@aws-sdk/core": {[m
+[32m+[m[32m      "version": "3.977.9",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@aws-sdk/core/-/core-3.977.9.tgz",[m
+[32m+[m[32m      "integrity": "sha512-reqPFEQrZxDZpeGj4PFMepBeR5LGYHRqq/L0motTzgFkCRBA4rFdaVXDSLYyGHhxVz7sT2PDnPN9CluGSfgyJA==",[m
+[32m+[m[32m      "devOptional": true,[m
+[32m+[m[32m      "license": "Apache-2.0",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@aws-sdk/types": "^3.974.5",[m
+[32m+[m[32m        "@aws-sdk/xml-builder": "^3.972.40",[m
+[32m+[m[32m        "@aws/lambda-invoke-store": "^0.3.0",[m
+[32m+[m[32m        "@smithy/core": "^3.33.3",[m
+[32m+[m[32m        "@smithy/signature-v4": "^5.6.12",[m
+[32m+[m[32m        "@smithy/types": "^4.17.2",[m
+[32m+[m[32m        "bowser": "^2.11.0",[m
+[32m+[m[32m        "tslib": "^2.6.2"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=20.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@aws-sdk/credential-provider-cognito-identity": {[m
+[32m+[m[32m      "version": "3.972.69",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@aws-sdk/credential-provider-cognito-identity/-/credential-provider-cognito-identity-3.972.69.tgz",[m
+[32m+[m[32m      "integrity": "sha512-vpsh9VWmQVC/nsdzf72F2yUMBOFT1aq+hoLseYV03zjVXVHkjqSNJskFRKPFxc3MRFrHNbSSmOwsbYE15u9ecw==",[m
+[32m+[m[32m      "devOptional": true,[m
+[32m+[m[32m      "license": "Apache-2.0",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@aws-sdk/nested-clients": "^3.997.44",[m
+[32m+[m[32m        "@aws-sdk/types": "^3.974.5",[m
+[32m+[m[32m        "@smithy/core": "^3.33.3",[m
+[32m+[m[32m        "@smithy/types": "^4.17.2",[m
+[32m+[m[32m        "tslib": "^2.6.2"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=20.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@aws-sdk/credential-provider-env": {[m
+[32m+[m[32m      "version": "3.972.70",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@aws-sdk/credential-provider-env/-/credential-provider-env-3.972.70.tgz",[m
+[32m+[m[32m      "integrity": "sha512-H404B7dJl2mCrBqahDEYsanB0xhdDp6tXnXcTUnXmmpy2Q3J0Ho0bUajZ2jr/RdwzCyS59Gi8xXIFwPLGBl6Uw==",[m
+[32m+[m[32m      "devOptional": true,[m
+[32m+[m[32m      "license": "Apache-2.0",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@aws-sdk/core": "^3.977.9",[m
+[32m+[m[32m        "@aws-sdk/types": "^3.974.5",[m
+[32m+[m[32m        "@smithy/core": "^3.33.3",[m
+[32m+[m[32m        "@smithy/types": "^4.17.2",[m
+[32m+[m[32m        "tslib": "^2.6.2"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=20.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@aws-sdk/credential-provider-http": {[m
+[32m+[m[32m      "version": "3.972.72",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@aws-sdk/credential-provider-http/-/credential-provider-http-3.972.72.tgz",[m
+[32m+[m[32m      "integrity": "sha512-X98zYOrVOeuosCX+6ktf29FC2N2GHPLia7qv6mzPzTc+RPAuHWCDS++Z6JK7eGYqb/v6uaW7bAXaOvDBfol+0w==",[m
+[32m+[m[32m      "devOptional": true,[m
+[32m+[m[32m      "license": "Apache-2.0",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@aws-sdk/core": "^3.977.9",[m
+[32m+[m[32m        "@aws-sdk/types": "^3.974.5",[m
+[32m+[m[32m        "@smithy/core": "^3.33.3",[m
+[32m+[m[32m        "@smithy/fetch-http-handler": "^5.7.2",[m
+[32m+[m[32m        "@smithy/node-http-handler": "^4.11.3",[m
+[32m+[m[32m        "@smithy/types": "^4.17.2",[m
+[32m+[m[32m        "tslib": "^2.6.2"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=20.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@aws-sdk/credential-provider-ini": {[m
+[32m+[m[32m      "version": "3.973.15",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@aws-sdk/credential-provider-ini/-/credential-provider-ini-3.973.15.tgz",[m
+[32m+[m[32m      "integrity": "sha512-Rykg6s5ceBuynMOGWgoowO4N+27JfnqXAnVaSunZl0hOO1XodSrxGNz6sCEbnmS0lAfQZDKyb3fbr46gSuv6Sg==",[m
+[32m+[m[32m      "devOptional": true,[m
+[32m+[m[32m      "license": "Apache-2.0",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@aws-sdk/core": "^3.977.9",[m
+[32m+[m[32m        "@aws-sdk/credential-provider-env": "^3.972.70",[m
+[32m+[m[32m        "@aws-sdk/credential-provider-http": "^3.972.72",[m
+[32m+[m[32m        "@aws-sdk/credential-provider-login": "^3.972.77",[m
+[32m+[m[32m        "@aws-sdk/credential-provider-process": "^3.972.70",[m
+[32m+[m[32m        "@aws-sdk/credential-provider-sso": "^3.973.14",[m
+[32m+[m[32m        "@aws-sdk/credential-provider-web-identity": "^3.972.76",[m
+[32m+[m[32m        "@aws-sdk/nested-clients": "^3.997.44",[m
+[32m+[m[32m        "@aws-sdk/types": "^3.974.5",[m
+[32m+[m[32m        "@smithy/core": "^3.33.3",[m
+[32m+[m[32m        "@smithy/credential-provider-imds": "^4.4.16",[m
+[32m+[m[32m        "@smithy/types": "^4.17.2",[m
+[32m+[m[32m        "tslib": "^2.6.2"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=20.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@aws-sdk/credential-provider-login": {[m
+[32m+[m[32m      "version": "3.972.77",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@aws-sdk/credential-provider-login/-/credential-provider-login-3.972.77.tgz",[m
+[32m+[m[32m      "integrity": "sha512-Jb59xfEISoN5mmbnA+HYqdtrSX3CgCtJoof+V5D8/TgUI56W63GEEd5Y58WijU3Ou6+WEgaLD1feVzaRXV5IDQ==",[m
+[32m+[m[32m      "devOptional": true,[m
+[32m+[m[32m      "license": "Apache-2.0",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@aws-sdk/core": "^3.977.9",[m
+[32m+[m[32m        "@aws-sdk/nested-clients": "^3.997.44",[m
+[32m+[m[32m        "@aws-sdk/types": "^3.974.5",[m
+[32m+[m[32m        "@smithy/core": "^3.33.3",[m
+[32m+[m[32m        "@smithy/types": "^4.17.2",[m
+[32m+[m[32m        "tslib": "^2.6.2"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=20.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@aws-sdk/credential-provider-node": {[m
+[32m+[m[32m      "version": "3.972.82",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@aws-sdk/credential-provider-node/-/credential-provider-node-3.972.82.tgz",[m
+[32m+[m[32m      "integrity": "sha512-znDkEOGXB8W3kG1LJUKP3foBZY/9qLM0eil/DxWXSp37XsdsRLQHE/d/OaCGGVgKpA6znR38h/+INk8do1FjiA==",[m
+[32m+[m[32m      "devOptional": true,[m
+[32m+[m[32m      "license": "Apache-2.0",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@aws-sdk/credential-provider-env": "^3.972.70",[m
+[32m+[m[32m        "@aws-sdk/credential-provider-http": "^3.972.72",[m
+[32m+[m[32m        "@aws-sdk/credential-provider-ini": "^3.973.15",[m
+[32m+[m[32m        "@aws-sdk/credential-provider-process": "^3.972.70",[m
+[32m+[m[32m        "@aws-sdk/credential-provider-sso": "^3.973.14",[m
+[32m+[m[32m        "@aws-sdk/credential-provider-web-identity": "^3.972.76",[m
+[32m+[m[32m        "@aws-sdk/types": "^3.974.5",[m
+[32m+[m[32m        "@smithy/core": "^3.33.3",[m
+[32m+[m[32m        "@smithy/credential-provider-imds": "^4.4.16",[m
+[32m+[m[32m        "@smithy/types": "^4.17.2",[m
+[32m+[m[32m        "tslib": "^2.6.2"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=20.0.0"[m
+[32m+[m[32m 
